@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center everything */
+    body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Background image */
+  background-image: url("https://t3.ftcdn.net/jpg/03/08/13/12/360_F_308131267_unLRF2JmPsjjXgrMRaFA3aEnrKa9aUxK.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Optional overlay effect */
+  position: relative;
+}
+
+    /* Card */
+    figure.snip1336 {
+      background: #e2e2f3;
+      max-width: 350px;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    figure.snip1336:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Cover image */
+    figure.snip1336 > img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* Content */
+    figure.snip1336 figcaption {
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Profile image */
+    figure.snip1336 .profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #090231;
+  margin-top: -100px;
+  background: #210b55;
+}
+
+    h2 {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+
+    h2 span {
+      display: block;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 10px 0 15px;
+    }
+
+    /* Buttons */
+    a {
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    .follow {
+      background: #3498db;
+      color: #110338;
+    }
+
+    .info {
+      border: 1px solid #3498db;
+      color: #3498db;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 480px) {
+      figure.snip1336 {
+        margin: 0 15px;
+      }
+    }
+    /* Cover wrapper */
+.cover {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  z-index: 0;
+}
+/* Cover image */
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fade overlay */
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(226, 226, 243, 0) 30%,
+    rgba(226, 226, 243, 0.6) 70%,
+    rgba(226, 226, 243, 1) 100%
+  );
+}
+/* Ensure content is above cover fade */
+figure.snip1336 figcaption {
+  position: relative;
+  z-index: 2;
+}
+
+/* Keep fade behind profile image */
+.cover::after {
+  z-index: 1;
+}
+  </style>
+</head>
+
+<body>
+
+  <figure class="snip1336">
+    <div class="cover">
+  <img src="https://tse2.mm.bing.net/th/id/OIP.PDiKtyjiUbzWP9j5mP0lIgHaEt?pid=Api&P=0&h=180" alt="cover">
+</div>
+    <figcaption>
+      <img src="https://media.tenor.com/uaQzaMG_OQ8AAAAM/evernight-hsr-lonely-lonely-i-guess-i'm-lonely.gif" alt="profile" class="profile">
+      <h2>Johnrel M. Jualo<span>IT</span></h2>
+      <p>SAO is Peak change my mind.</p>
+      <a href="https://www.facebook.com/johnrel.jj" class="follow">Follow</a>
+      <a href="index.html" class="info">Home</a>
+    </figcaption>
+  </figure>
+
+</body>
+</html>
